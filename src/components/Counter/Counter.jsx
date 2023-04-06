@@ -1,8 +1,8 @@
 import css from './Counter.module.css';
-import React from 'react';
+import React, {Component} from 'react';
 import { Controls } from './Controls';
 // import { LoginButton } from '../Buttons';
-class Counter extends React.Component { 
+class Counter extends Component { 
     static defaultProps = {
         initialValue: 0
     }
@@ -30,9 +30,10 @@ class Counter extends React.Component {
         )
     }
     render() {
+        const { value } = this.state;
         return (
             <div className={css.Counter}>
-                <span className={css.CounterValue}>{ this.state.value}</span>
+                <span className={css.CounterValue}>{ value}</span>
 
                 <Controls onDecrement={this.handleDecrement} onIncrement={ this.handleIncrement} />
             </div>

@@ -54,3 +54,7 @@
 .secondary{
   background-color: darkgoldenrod;
 }
+.todo-Info{
+  display: flex;
+  flex-direction: column;
+}
